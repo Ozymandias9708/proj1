@@ -1,0 +1,157 @@
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Highlight the table header on hover */
+  th:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Add a background color to the table rows on hover */
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Add a background color to the active/selected row */
+  tr.active {
+    background-color: #ffeb3b;
+  }
+  
+  /* Style the first column */
+  td:first-child {
+    font-weight: bold;
+  }
+  
+  /* Responsive table on small screens (up to 600px) */
+  @media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+    th {
+      text-align: left;
+    }
+    /* Hide table headers (but not display: none;) */
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    tr {
+      margin-bottom: 15px;
+    }
+    td {
+      /* Behave like a "row" */
+      border: none;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+      padding-left: 50%;
+    }
+    td:before {
+      /* Now, define the data content for each cell */
+      content: attr(data-label);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+  }
+  
+  /* Additional styling for larger screens (min-width: 601px) */
+  @media screen and (min-width: 601px) {
+    /* Customize styles for larger screens here */
+    th, td {
+      padding: 15px;
+    }
+    th:hover {
+      background-color: #e0e0e0;
+    }
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+    td:before {
+      content: "";
+    }
+ 
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  #form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  #form p {
+    margin: 0;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  #form input[type="date"], #form input[type="number"] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  #form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    background-image: linear-gradient(to right,rgb(8, 149, 210),rgb(52, 10, 135));
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #cancel{
+    background-image: linear-gradient(to right,rgb(210, 193, 8),rgb(182, 22, 16))!important;
+  }
+  #form button:hover {
+    border: 2px solid black;
+  }
+  
+ 
